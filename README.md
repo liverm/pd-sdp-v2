@@ -17,7 +17,7 @@ Copy the PowerShell script to the following directory on the ServiceDesk Plus se
 
 `C:\Program Files\ManageEngine\ServiceDesk\integration\custom_scripts`
 
-The script is designed to send events to PagerDuty that will trigger an incident.  Modify the script adding the appropriate PagerDuty integration key.  To minimize the number of scripts that need to be maintained, consider using a key associated with an event ruleset endpoint.
+The script is designed to send events to PagerDuty that will trigger an incident.  Modify the script adding the appropriate PagerDuty integration key.  To minimize the number of scripts that need to be maintained, consider using a key associated with an event ruleset endpoint.  The `client_url` should also be modified to include the FQDN of the local instance of ServiceDesk Plus.
 
 The script uses a subset of the available parameters supplied by the ServiceDesk Plus V1 API.  A full list of the parameters can be found in the [ServiceDesk Plus Administration Guide](https://help.servicedeskplus.com/configurations/helpdesk/writingacustomscript.html).
 
