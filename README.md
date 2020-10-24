@@ -27,7 +27,7 @@ The script is designed to send events to PagerDuty that will trigger and resolve
 The script uses a subset of the available parameters supplied by the ServiceDesk Plus V1 API.  A full list of the parameters can be found in the [ServiceDesk Plus Administration Guide](https://help.servicedeskplus.com/configurations/helpdesk/writingacustomscript.html).
 
 
-The script is called via a new Incident Management Custom Trigger (see Admin | Incident Management | Custom Triggers).  Two new Actions are required, one for when an new incident is created and another for when an incident is editted and the status is changed to `Cancelled`, `Closed` or `Resolved`.  In both cases, give the Action a meaningful name and description.
+The script is called via a new Incident Management Custom Trigger (see Admin | Incident Management | Custom Triggers).  Two new Actions are required, one for when an new incident is created and another for when an incident is edited and the status is changed to `Cancelled`, `Closed` or `Resolved`.  In both cases, give the Action a meaningful name and description.
 
 
 ![Image 1a: Creating a new Custom Trigger in ServiceDesk Plus](./images/Image0-Custom-Trigger-Actions.png)
