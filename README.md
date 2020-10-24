@@ -1,6 +1,11 @@
 # PD-SDP-V2
 
-This repository contains a Python3 script (triggerPagerDuty.py) that can be used with the on-premise server version of ManageEngine's ServiceDesk Plus to send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint.  This can either be a service-level endpoint or an endpoint associated with a Ruleset.
+This repository contains a Python script (triggerPagerDuty.py) that can be used with the on-premise server version of ManageEngine's ServiceDesk Plus to send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint.  This can either be a service-level endpoint or an endpoint associated with a Ruleset.
+
+To create the necessary Events API routing key please consult the following PagerDuty documentation:
+
+* [PagerDuty Rulesets](https://support.pagerduty.com/docs/rulesets#send-events-to-a-global-ruleset)
+* [PagerDuty Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#create-a-generic-events-api-integration)
 
 ## Test Environment
 
@@ -13,11 +18,11 @@ Make sure the Python interpreter is added to the %PATH% system variable.
 
 ## Installation
 
-Copy the PowerShell script to the following directory on the ServiceDesk Plus server:
+Copy the Python script to the following directory on the ServiceDesk Plus server:
 
 `C:\Program Files\ManageEngine\ServiceDesk\integration\custom_scripts`
 
-The script is designed to send events to PagerDuty that will trigger an incident.  Modify the script adding the appropriate PagerDuty integration key.  To minimize the number of scripts that need to be maintained, consider using a key associated with an event ruleset endpoint.  The `client_url` should also be modified to include the FQDN of the local instance of ServiceDesk Plus.
+The script is designed to send events to PagerDuty that will trigger and resolve an incident.  Modify the script adding the appropriate PagerDuty integration key.  To minimize the number of scripts that need to be maintained, consider using a key associated with an event ruleset endpoint.  The `client_url` should also be modified to include the FQDN of the local instance of ServiceDesk Plus.
 
 The script uses a subset of the available parameters supplied by the ServiceDesk Plus V1 API.  A full list of the parameters can be found in the [ServiceDesk Plus Administration Guide](https://help.servicedeskplus.com/configurations/helpdesk/writingacustomscript.html).
 
