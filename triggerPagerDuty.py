@@ -5,9 +5,15 @@ from datetime import datetime
 import shutil
 
 # Read request data from temporary file on ServiceDesk Plus server
-infile = str(sys.argv[1])
+# infile = str(sys.argv[1])
+# with open(infile) as data_file:
+#     params = json.load(data_file)
+# requestobj = params["request"]
+
+# Read sample request data file from local disk - enable for testing
+infile = 'sdp_test_params.json'
 with open(infile) as data_file:
-    params = json.load(data_file)
+	params = json.load(data_file)
 requestobj = params["request"]
 
 # Dump the JSON to a temporary file - enable for debug
