@@ -1,6 +1,6 @@
 .DS_Store
 .python-version
-.venv/
+.venv*/
 .vscode/
 temp/
 __pycache__/
